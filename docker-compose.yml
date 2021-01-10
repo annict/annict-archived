@@ -5,6 +5,9 @@ services:
     build:
       context: ../annict-lb
       dockerfile: ./Dockerfile.local
+    depends_on:
+      - api
+      - web
     ports:
       - 3000:80
   web:
