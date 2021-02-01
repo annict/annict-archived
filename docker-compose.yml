@@ -6,12 +6,12 @@ services:
       context: ../annict-web
       dockerfile: ./Dockerfile.local
     command: "npm run dev"
-    volumes:
-      - ../annict-web:/workspace
-      - web_node_modules_vol:/workspace/node_modules
     ports:
       - 3000:3000
     tty: true
+    volumes:
+      - ../annict-web:/workspace
+      - web_node_modules_vol:/workspace/node_modules
   api:
     build:
       context: ../annict-api
@@ -21,6 +21,7 @@ services:
       - api_frontend
       - job
       - postgresql
+      - web
     environment:
       LANG: C.UTF-8
     ports:
@@ -35,11 +36,13 @@ services:
       context: ../annict-api
       dockerfile: ./app/frontend/Dockerfile.local
     command: /bin/ash -c 'yarn webpack:start'
+    depends_on:
+      - web
+    ports:
+      - 3002:8080
     volumes:
       - ../annict-api:/workspace
       - api_frontend_node_modules_vol:/annict/node_modules
-    ports:
-      - 3002:8080
   job:
     build:
       context: ../annict-api
@@ -51,13 +54,13 @@ services:
       - ../annict-api:/workspace
       - gems_vol:/usr/local/bundle
   postgresql:
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
     image: postgres:12.4-alpine
     ports:
       - 35432:5432
     volumes:
       - ./volumes/postgresql:/var/lib/postgresql/data
-    environment:
-      POSTGRES_HOST_AUTH_METHOD: trust
   redis:
     image: redis:5.0.5-alpine
     ports:
