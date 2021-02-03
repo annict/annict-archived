@@ -15,12 +15,14 @@ services:
       context: ../annict-web
       dockerfile: ./Dockerfile.local
     command: "npm run dev"
-    volumes:
-      - ../annict-web:/workspace
-      - web_node_modules_vol:/workspace/node_modules
+    depends_on:
+      - api
     ports:
       - 3001:3000
     tty: true
+    volumes:
+      - ../annict-web:/workspace
+      - web_node_modules_vol:/workspace/node_modules
   api:
     build:
       context: ../annict-api
@@ -44,11 +46,11 @@ services:
       context: ../annict-api
       dockerfile: ./app/frontend/Dockerfile.local
     command: /bin/ash -c 'yarn webpack:start'
+    ports:
+      - 3003:8080
     volumes:
       - ../annict-api:/workspace
       - api_frontend_node_modules_vol:/annict/node_modules
-    ports:
-      - 3003:8080
   job:
     build:
       context: ../annict-api
