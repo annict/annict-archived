@@ -1,6 +1,15 @@
 version: "3.7"
 
 services:
+  lb:
+    build:
+      context: ../annict-lb
+      dockerfile: ./Dockerfile.local
+    depends_on:
+      - api
+      - web
+    ports:
+      - 3000:80
   web:
     build:
       context: ../annict-web
@@ -10,7 +19,7 @@ services:
       - ../annict-web:/workspace
       - web_node_modules_vol:/workspace/node_modules
     ports:
-      - 3000:3000
+      - 3001:3000
     tty: true
   api:
     build:
@@ -24,7 +33,7 @@ services:
     environment:
       LANG: C.UTF-8
     ports:
-      - 3001:3000
+      - 3002:3000
     stdin_open: true # for Pry
     tty: true # for Pry
     volumes:
@@ -39,7 +48,7 @@ services:
       - ../annict-api:/workspace
       - api_frontend_node_modules_vol:/annict/node_modules
     ports:
-      - 3002:8080
+      - 3003:8080
   job:
     build:
       context: ../annict-api
