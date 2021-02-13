@@ -2,6 +2,23 @@
 
 # Annict (アニクト)
 
+[Annict](https://annict.jp)は、見たアニメを記録したり友達に共有したりできるアニメ視聴記録サービスです。
+
+このリポジトリはIssue管理をしたり開発で使用する雑多なファイルを管理するためのもので、実際の開発は以下のリポジトリで行っています。
+
+- [annict-api](https://github.com/kiraka-net/annict-api)
+  - サービス内で使用している内部APIや、[Annict Developers](https://developers.annict.jp/)で一般公開しているWeb APIを提供しています
+  - 元々Annictはこのリポジトリしか無いモノリシックなRailsアプリだったので、現状Web API以外にもサイト内の大半のページのHTMLはこのRailsアプリが返しています
+  - :construction: 準備中
+- [annict-web](https://github.com/kiraka-net/annict-web)
+  - Webブラウザ向けのUIを提供します
+  - annict-api のHTMLを返す部分をこのリポジトリに切り出し始めています
+  - :construction: 準備中
+
+## Annictの開発に参加する
+
+あとで書く。
+
 ## License
 
 Copyright 2014-2021 Annict
