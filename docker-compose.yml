@@ -27,7 +27,7 @@ services:
     build:
       context: ../annict-api
       dockerfile: ./Dockerfile.local
-    command: /bin/ash -c 'rm -rf tmp/pids/server.pid; bundle exec rails s -b 0.0.0.0'
+    command: /bin/bash -c 'rm -rf tmp/pids/server.pid; bundle exec rails s -b 0.0.0.0'
     depends_on:
       - api_frontend
       - job
@@ -45,7 +45,7 @@ services:
     build:
       context: ../annict-api
       dockerfile: ./app/frontend/Dockerfile.local
-    command: /bin/ash -c 'yarn webpack:start'
+    command: /bin/bash -c 'yarn webpack:start'
     ports:
       - 3003:8080
     volumes:
@@ -55,7 +55,7 @@ services:
     build:
       context: ../annict-api
       dockerfile: ./Dockerfile.local
-    command: /bin/ash -c 'bundle exec rails jobs:work'
+    command: /bin/bash -c 'bundle exec rails jobs:work'
     depends_on:
       - postgresql
     volumes:
