@@ -30,7 +30,7 @@ services:
     command: /bin/bash -c 'rm -rf tmp/pids/server.pid; bundle exec rails s -b 0.0.0.0'
     depends_on:
       - api_frontend
-      - job
+      - worker
       - postgresql
     environment:
       LANG: C.UTF-8
@@ -51,7 +51,7 @@ services:
     volumes:
       - ../annict-api:/workspace
       - api_frontend_node_modules_vol:/annict/node_modules
-  job:
+  worker:
     build:
       context: ../annict-api
       dockerfile: ./Dockerfile.local
