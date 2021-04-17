@@ -1,4 +1,4 @@
-<p align="center"><a href="https://annict.com" target="_blank" rel="noopener"><img src="https://user-images.githubusercontent.com/56767/56467671-fdd6ea80-645c-11e9-9056-a5d3fd5739e6.png" width="130" /></a></p>
+<p align="center"><a href="https://annict.jp" target="_blank" rel="noopener"><img src="https://user-images.githubusercontent.com/56767/56467671-fdd6ea80-645c-11e9-9056-a5d3fd5739e6.png" width="130" /></a></p>
 
 # Annict (アニクト)
 
@@ -6,12 +6,8 @@
 
 このリポジトリはIssue管理をしたり開発で使用する雑多なファイルを管理するためのもので、実際の開発は以下のリポジトリで行っています。
 
-- [annict-api](https://github.com/kiraka-net/annict-api) (:construction: 準備中)
-  - サービス内で使用している内部APIや、[Annict Developers](https://developers.annict.jp/) で一般公開しているWeb APIを提供しています
-  - 元々Annictはこのリポジトリしか無いモノリシックなRailsアプリだったので、現状Web API以外にもサイト内の大半のページのHTMLはこのRailsアプリが返しています
-- [annict-web](https://github.com/kiraka-net/annict-web) (:construction: 準備中)
-  - Webブラウザ向けのUIを提供します
-  - annict-api のHTMLを返す部分をこのリポジトリに切り出し始めています
+- [annict-web](https://github.com/kiraka/annict-web)
+  - https://annict.jp のバックエンドです
 
 ## 開発に参加する
 
@@ -19,10 +15,10 @@
 
 開発に関するもろもろのやり取りは以下で行っています。
 
-- [GitHub Issues](https://github.com/kiraka-net/annict/issues)
+- [GitHub Issues](https://github.com/kiraka/annict/issues)
 - [Discord](https://discord.gg/PVJRUKP)
 
-やることの優先度や、今何をやっているかは [GitHub Projects](https://github.com/orgs/kiraka-net/projects/1) で管理しています。
+やることの優先度や、今何をやっているかは [GitHub Projects](https://github.com/orgs/kiraka/projects/1) で管理しています。
 
 ### セキュリティに関する報告
 
