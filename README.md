@@ -9,25 +9,23 @@
 - [annict-web](https://github.com/kiraka/annict-web)
   - https://annict.jp のバックエンドです
 
-## 開発に参加する
-
-### 新機能、改善案やバグの話など
+## 開発コミュニティに参加する
 
 開発に関するもろもろのやり取りは以下で行っています。
 
 - [GitHub Issues](https://github.com/kiraka/annict/issues)
+  - 機能追加や改善案、バグの管理をしています
+- [GitHub Discussions](https://github.com/kiraka/annict/discussions)
+  - その他質問や雑談などができる場として公開しています
 - [Discord](https://discord.gg/PVJRUKP)
+  - 雑談チャットです
 
 やることの優先度や、今何をやっているかは [GitHub Projects](https://github.com/orgs/kiraka/projects/1) で管理しています。
 
-### セキュリティに関する報告
+## セキュリティに関する報告
 
 hello@annict.com までメールをください。
 Twitterなど、第三者が閲覧できる場所に投稿しないでもらえるとありがたいです。
-
-### 開発環境を作る
-
-あとで書く。
 
 ## ライセンス
 
