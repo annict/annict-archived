@@ -22,6 +22,10 @@
 
 やることの優先度や、今何をやっているかは [GitHub Projects](https://github.com/orgs/kiraka/projects/1) で管理しています。
 
+## 開発環境を作る
+
+[DEVELOPMENT.md](DEVELOPMENT.md) をご覧ください。
+
 ## セキュリティに関する報告
 
 hello@annict.com までメールをください。
