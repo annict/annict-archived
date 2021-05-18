@@ -24,7 +24,7 @@
 
 ## 開発環境を作る
 
-[DEVELOPMENT.md](DEVELOPMENT.md) をご覧ください。
+[docs/development.md](docs/development.md) をご覧ください。
 
 ## セキュリティに関する報告
 
