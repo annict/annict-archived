@@ -7,7 +7,7 @@
 このリポジトリはIssue管理をしたり開発で使用する雑多なファイルを管理するためのもので、実際の開発は以下のリポジトリで行っています。
 
 - [annict-web](https://github.com/kiraka/annict-web)
-  - https://annict.jp のバックエンドです
+  - https://annict.com のバックエンドです
 
 ## 開発コミュニティに参加する
 
