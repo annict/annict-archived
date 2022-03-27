@@ -20,7 +20,7 @@
 - [Discord](https://discord.gg/PVJRUKP)
   - 雑談チャットです
 
-やることの優先度や、今何をやっているかは [GitHub Projects](https://github.com/orgs/kiraka/projects/1) で管理しています。
+やることの優先度や、今何をやっているかは [GitHub Projects](https://github.com/orgs/kiraka/projects/7) で管理しています。
 
 ## 開発環境を作る
 
